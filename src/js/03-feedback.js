@@ -24,11 +24,11 @@ form.addEventListener(
 form.addEventListener('submit', event => {
   event.preventDefault();
   const currentState = {
-    email: '',
-    message: '',
+    email: emailInput.value,
+    message: messageInput.value,
   };
+  console.log(currentState);
   localStorage.removeItem(FEEDBACK_KEY);
   emailInput.value = '';
   messageInput.value = '';
-  console.log(currentState);
 });
